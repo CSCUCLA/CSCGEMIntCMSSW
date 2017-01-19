@@ -19,6 +19,7 @@
 <use   name="RecoLocalMuon/GEMRecHit"/>
 <use   name="DataFormats/HepMCCandidate"/>
 <use   name="CSCGEMInt/AnalysisSupport"/>
+<use   name="CSCGEMInt/Utilities"/>
 <export>
   <lib   name="1"/>
 </export>

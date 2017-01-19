@@ -1,6 +1,6 @@
 #include "../interface/SimMuonFiller.h"
 #include "../interface/TMBFiller.h"
-#include "../../AnalysisSupport/interface/ParticleUtilities.h"
+#include "AnalysisSupport/CMSSWUtilities/interface/ParticleUtilities.h"
 
 #include "Geometry/CSCGeometry/interface/CSCGeometry.h"
 #include "Geometry/CSCGeometry/interface/CSCLayerGeometry.h"

@@ -1,7 +1,7 @@
 #include "../interface/BaseTreeMaker.h"
 
-#include "../../AnalysisSupport/interface/TreeWrapper.h"
-#include "../../TreeFillers/interface/BaseFiller.h"
+#include "AnalysisSupport/TreeInterface/interface/TreeWrapper.h"
+#include "CSCGEMIntCMSSW/TreeFillers/interface/BaseFiller.h"
 #include <TFile.h>
 
 namespace CSCGEMInt {

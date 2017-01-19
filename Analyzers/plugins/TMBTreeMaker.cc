@@ -1,8 +1,8 @@
 #include "FWCore/Framework/interface/MakerMacros.h"
 
 #include "../interface/BaseTreeMaker.h"
-#include "../../TreeFillers/interface/TMBFiller.h"
-#include "../../TreeFillers/interface/SimMuonFiller.h"
+#include "CSCGEMIntCMSSW/TreeFillers/interface/TMBFiller.h"
+#include "CSCGEMIntCMSSW/TreeFillers/interface/SimMuonFiller.h"
 using namespace CSCGEMInt;
 
 class TMBTreeMaker : public BaseTreeMaker {

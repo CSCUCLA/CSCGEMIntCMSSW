@@ -1,5 +1,5 @@
 <library   name="CSCGEMIntCMSSWAnalyzerPlugins" file="*.cc">
+    <use name="AnalysisSupport/TreeInterface"/>
     <use name="CSCGEMInt/Analyzers"/>
-    <use name="CSCGEMInt/AnalysisSupport"/>
     <use name="CSCGEMInt/TreeFillers"/>    
 </library>
