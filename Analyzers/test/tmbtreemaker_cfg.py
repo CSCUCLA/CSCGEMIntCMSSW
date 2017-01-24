@@ -36,6 +36,8 @@ process.analyze = cms.EDAnalyzer("TMBTreeMaker",
         genParticleTag     = cms.InputTag("genParticles"),   
         trackingParticleTag= cms.InputTag("mix","MergedTrackTruth"),
         cscSimHitTag       = cms.InputTag("g4SimHits","MuonCSCHits"),   
+        CSCStripDigiSimLink       = cms.InputTag("simMuonCSCDigis","MuonCSCStripDigiSimLinks"),   
+        CSCWireDigiSimLink       = cms.InputTag("simMuonCSCDigis","MuonCSCWireDigiSimLinks"),   
         
         )
 

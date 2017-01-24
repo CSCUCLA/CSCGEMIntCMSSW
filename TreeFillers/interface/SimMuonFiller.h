@@ -1,7 +1,8 @@
 #ifndef CSCGEMINT_TREEFILLERS_SimMuonFiller_H
 #define CSCGEMINT_TREEFILLERS_SimMuonFiller_H
 
-
+#include "DataFormats/Common/interface/DetSetVector.h"
+#include "SimDataFormats/TrackerDigiSimLink/interface/StripDigiSimLink.h"
 #include "SimDataFormats/TrackingAnalysis/interface/TrackingParticle.h"
 #include "SimDataFormats/TrackingHit/interface/PSimHit.h"
 #include "BaseFiller.h"
@@ -15,11 +16,11 @@ namespace CSCGEMInt{
 class TMBFiller;
 
 class SimMuonFiller : public BaseFiller {
-	enum Options {NONE = 0, TMB_TRUTH = (1 << 0) };
+	enum Options {NONE = 0, TMB_TRUTH = (1 << 0), SIMDIGI_LINK = (1 << 1) };
 
 
 public:
-	SimMuonFiller(const edm::ParameterSet& cfg, edm::ConsumesCollector && cc, const TMBFiller * tmbFillerPtr = 0);
+	SimMuonFiller(const edm::ParameterSet& cfg, edm::ConsumesCollector && cc, const TMBFiller * tmbFillerPtr = 0, bool addSimDigiLinks = false);
 	virtual ~SimMuonFiller();
 	virtual void setup(TreeWrapper * wrapper);
 	virtual void reset();
@@ -42,12 +43,22 @@ const TMBFiller * tmbFiller = 0;
 const CSCGeometry      * theCSCGeometry = 0;
 edm::EDGetTokenT<TrackingParticleCollection> t_trackingParticles;
 edm::EDGetTokenT<std::vector<PSimHit>> t_csc_sh;
+
+edm::EDGetTokenT<edm::DetSetVector<StripDigiSimLink>> t_csc_stlink;
+edm::EDGetTokenT<edm::DetSetVector<StripDigiSimLink>> t_csc_wrlink;
+
 size i_csc_nHits         = 0;
 size i_csc_tpNumber      = 0;
 size i_csc_detID         = 0;
 size i_csc_strip         = 0;
 size i_csc_wg            = 0;
 size i_csc_w             = 0;
+size i_csc_stLink_nHits  =0;
+size i_csc_stLink_detId  =0;
+size i_csc_stLink_strip  =0;
+size i_csc_wrLink_nHits  =0;
+size i_csc_wrLink_detId  =0;
+size i_csc_wrLink_wire   =0;
 
 
 

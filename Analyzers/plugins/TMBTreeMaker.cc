@@ -9,7 +9,7 @@ class TMBTreeMaker : public BaseTreeMaker {
 public:
     explicit TMBTreeMaker(const edm::ParameterSet& cfg) : BaseTreeMaker(cfg){
     	addFiller(new TMBFiller(cfg,consumesCollector()));
-    	addFiller(new SimMuonFiller(cfg,consumesCollector(),(TMBFiller*)fillers.back()));
+    	addFiller(new SimMuonFiller(cfg,consumesCollector(),(TMBFiller*)fillers.back(),true));
     	setup();
     }
     ~TMBTreeMaker() {};
